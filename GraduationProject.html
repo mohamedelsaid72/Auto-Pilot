@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pilot | Graduation Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body class="GraduationProject">
+    <!-- preloader markup starts -->
+    <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+
+    <nav data-aos="fade-right" data-aos-duration="700" data-aos-delay="1300"
+        class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a data-aos="fade-right" data-aos-duration="700" class="navbar-brand" href="./index.html">Auto Pilot</a>
+            <button data-aos="fade-left" data-aos-duration="700" class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i id="menu" class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown animate__animated animate__fadeInLeft animate1">
+                        <a class="nav-link active" href="./GraduationProject.html">Graduation Project</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInLeft animate2">
+                        <a class="nav-link" href="./Contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item animate__animated animate__fadeInLeft animate4 logged-out">
+                        <a class="nav-link" href="./login.html">Login</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInLeft animate4 logged-in">
+                        <a class="nav-link" href="/profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInLeft animate4 logged-in">
+                        <a class="nav-link" href="#" id='logout'>Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>How did we get here?</h2>
+                </div>
+                <div class="col-md-10">
+                    <img width="100%" src="./images/history.png" alt="">
+                    <p>Image credits to <a target="_blanck"
+                            href="https://www.udacity.com/course/self-driving-car-fundamentals-featuring-apollo--ud0419">Udacity’s
+                            Self-Driving Fundamentals featuring Apollo</a></p>
+                </div>
+                <div class="col-md-10">
+                    <h5>As we look at the history of transportation, our human ancestors started to walk and run since 1
+                        million years ago. Though it might sound like a no-brainer, such mode has allowed us to liberate
+                        our hands and transport goods (or even other human) from one place to another using our muscle
+                        power. We can now walk and text at the same time, maintaining the double pendulum with bent legs
+                        for stability.</h5>
+                    <h5>Since ~4,000 years ago, we had used horse carriage to move people and goods. Humans ride some
+                        animals directly, use them for carrying goods, or harness them to pull wheeled vehicles.</h5>
+                    <h5>The automobile did not come until 135 years ago in late 19th century, with prototypes invented
+                        by
+                        German men Karl Benz, Gottlieb Daimler, and Nicolaus Otto and a French engineer Emile Levassor.
+                    </h5>
+                    <h5>The idea of self-driving vehicles dates back much further than Google’s research or Tesla’s beta
+                        releases in the present day. In fact, the concept of an autonomous car dates back to Futurama,
+                        an exhibit at the 1939 New York World’s Fair. General Motors created the exhibit to display its
+                        vision of what the world would look like in a couple of decades, and this vision included an
+                        automated highway system that would guide self-driving cars.</h5>
+                    <h2>The Society of Automotive Engineers define the levels of driving autonomy as follows, where
+                        current technologies in the industry are still struggling to get to Level 3 or Level 4
+                        perfectly.
+                    </h2>
+                </div>
+                <div class="col-md-10 d-flex justify-content-center">
+                    <img style="max-width: 870px;" src="./images/levels.png" alt="">
+                </div>
+                <div class="col-md-10">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Levels of automation</th>
+                                <th scope="col">WHO DOES WHAT, WHEN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Level 0</th>
+                                <td>The human driver does all the driving.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Level 1</th>
+                                <td>An advanced driver assistance system (ADAS) on the vehicle can sometimes assist the
+                                    human driver with either steering or braking/accelerating, but not both
+                                    simultaneously.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Level 2</th>
+                                <td>An advanced driver assistance system (ADAS) on the vehicle can itself actually
+                                    control both steering and braking/accelerating simultaneously under some
+                                    circumstances. The human driver must continue to pay full attention (“monitor the
+                                    driving environment”) at all times and perform the rest of the driving task.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Level 3</th>
+                                <td>An automated driving system (ADS) on the vehicle can itself perform all aspects of
+                                    the driving task under some circumstances. In those circumstances, the human driver
+                                    must be ready to take back control at any time when the ADS requests the human
+                                    driver to do so. In all other circumstances, the human driver performs the driving
+                                    task.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Level 4</th>
+                                <td>An automated driving system (ADS) on the vehicle can itself perform all driving
+                                    tasks and monitor the driving environment – essentially, do all the driving – in
+                                    certain circumstances. The human need not pay attention in those circumstances.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Level 5</th>
+                                <td>An automated driving system (ADS) on the vehicle can do all the driving in all
+                                    circumstances. The human occupants are just passengers and need never be involved in
+                                    driving.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCgeIuV_9-r9Z06QRNZK4gdXNx7k63upS0",
+            authDomain: "self-driving-car-401a8.firebaseapp.com",
+            projectId: "self-driving-car-401a8",
+            storageBucket: "self-driving-car-401a8.appspot.com",
+            messagingSenderId: "393443993080",
+            appId: "1:393443993080:web:1196490a49b8fb2232620d"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //firebase variables
+        const auth = firebase.auth();
+    </script>
+
+    <!-- script file -->
+    <script src="./script/script.js"></script>
+    <script src="./script/home.js"></script>
+    <script src="./script/auth.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

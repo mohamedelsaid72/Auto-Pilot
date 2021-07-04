@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+	<!--  All snippets are MIT license http://bootdey.com/license -->
+	<title>Your Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="style/alerts.css">
+	<link rel="stylesheet" href="./style/profile_style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="alert info" style="display:none;">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			<strong>INFO : </strong>
+			<p> Google User cannot edit profile settings. </p>
+			<a href="index.html" style="color:white">
+				<h6> Go back home <i class="fas fa-home"></i> </h6>
+			</a>
+		</div>
+		<div class="row gutters">
+			<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+				<div class="card h-100">
+					<div class="card-body">
+						<div class="account-settings">
+							<div class="user-profile">
+								<div class="user-avatar">
+									<img id='uAvatar' src="/images/Users/anon.png" alt="User Avatar">
+								</div>
+								<h5 class="user-name">User Name</h5>
+								<h6 class="user-email">User@email.co</h6>
+							</div>
+							<div class="about">
+								<h5 class="mb-2 text-primary">About</h5>
+								<p> <strong>Country :</strong> <span class='country'> not added yet </span></p>
+								<p> <strong>City :</strong> <span class='city'> not added yet</span> </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id='settingsEdit' class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+				<div class="card h-100">
+					<div class="card-body">
+						<div class="text-center">
+							<h6 class="font-weight-bold ">Update Your info and settings</h6>
+						</div>
+						<form id='update-settings'>
+							<div class="row gutters">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<h6 class="mb-3 text-primary">Personal Details</h6>
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="form-group">
+										<label for="fullName">Full Name</label>
+										<input type="text" class="form-control" id="fullName"
+											placeholder="Change your name">
+										<p class='name-error' style='color:crimson;'></p>
+										<p class='name-success' style='color:#05c77e;'></p>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="form-group">
+										<label for="eMail">Email</label>
+										<input type="email" class="form-control" id="eMail"
+											placeholder="Change your email">
+										<p class='email-error' style='color:crimson;'></p>
+										<p class='email-success' style='color:#05c77e;'></p>
+									</div>
+								</div>
+
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" class="form-control" id="password"
+											placeholder="Enter new password">
+										<p class='password-error' style='color:crimson;'></p>
+										<p class='password-success' style='color:#05c77e;'></p>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="form-group">
+										<label for="profile-image">Profile avatar</label>
+										<input type="file" id="profile-image" />
+										<p class='avatar-error' style='color:crimson;'></p>
+										<p class='avatar-success' style='color:#05c77e;'></p>
+									</div>
+								</div>
+							</div>
+							<div class="row gutters">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<h6 class="mb-3 text-primary">Address</h6>
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="form-group">
+										<label for="Street">Country</label>
+										<input type="name" class="form-control" id="country"
+											placeholder="Enter your country">
+										<p class='country-error' style='color:crimson;'></p>
+										<p class='country-success' style='color:#05c77e;'></p>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+									<div class="form-group">
+										<label for="city">City</label>
+										<input type="name" class="form-control" id="city" placeholder="Enter City">
+										<p class='country-error' style='color:crimson;'></p>
+										<p class='country-success' style='color:#05c77e;'></p>
+									</div>
+								</div>
+
+							</div>
+							<div class="row gutters">
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<div class="text-right">
+										<a type="button" href="index.html" class="btn btn-secondary">Go back home <i
+												class="fas fa-home"></i></a>
+										<button type="submit" class="btn btn-success">Update</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCgeIuV_9-r9Z06QRNZK4gdXNx7k63upS0",
+			authDomain: "self-driving-car-401a8.firebaseapp.com",
+			projectId: "self-driving-car-401a8",
+			storageBucket: "self-driving-car-401a8.appspot.com",
+			messagingSenderId: "393443993080",
+			appId: "1:393443993080:web:1196490a49b8fb2232620d"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		//firebase variables
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+		const storage = firebase.storage();
+	</script>
+
+	<script src="script/auth.js"></script>
+	<script src="script/firestore.js"></script>
+	<script src="script/fire storage.js"></script>
+	<script src='script/profile.js'></script>
+</body>
+
+</html>

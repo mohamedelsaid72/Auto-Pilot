@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Pilot</title>
+  <!-- amCharts javascript sources -->
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- style css -->
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+  <!-- preloader markup starts -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+
+  <nav data-aos="fade-right" data-aos-duration="700" data-aos-delay="1300"
+    class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a data-aos="fade-right" data-aos-duration="700" class="navbar-brand" href="./index.html">Auto Pilot</a>
+      <button data-aos="fade-left" data-aos-duration="700" class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i id="menu" class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item dropdown animate__animated animate__fadeInLeft animate1">
+            <a class="nav-link" href="./GraduationProject.html">Graduation Project</a>
+          </li>
+          <li class="nav-item animate__animated animate__fadeInLeft animate2">
+            <a class="nav-link" href="./Contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item animate__animated animate__fadeInLeft animate4 logged-out">
+            <a class="nav-link" href="./login.html">Login</a>
+          </li>
+          <li class="nav-item animate__animated animate__fadeInLeft animate4 logged-in">
+            <a class="nav-link" href="/profile.html">Profile</a>
+          </li>
+          <li class="nav-item animate__animated animate__fadeInLeft animate4 logged-in">
+            <a class="nav-link" href="#" id='logout'>Log out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="header">
+    <div class="container header-contain">
+      <div class="row">
+        <div data-aos="fade-right" data-aos-delay="1900" data-aos-duration="1500"
+          class="col-lg-12 col-md-12 col-sm-12 p-4">
+          <h2>Future of Driving</h2>
+          <h1>Autonomous Car Software System</h1>
+          <p>Digital traces and Hybrid navigation</p>
+        </div>
+      </div>
+    </div>
+    <div class="up">
+      <a href="#header">
+        <i class="fas fa-level-up-alt" aria-hidden="true"></i>
+      </a>
+    </div>
+  </header>
+
+  <section id="why" class="why">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-down" data-aos-duration="1500" class="col-md-12">
+          <div class="text">
+            <h1>Why Autonomous Cars ?</h1>
+            <h3>How autonomous cars will transform the way we live and work ?</h3>
+            <h5>Here are some of the more intriguing predictions.</h5>
+          </div>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1500" class="col-md-7">
+          <div class="text">
+            <ul>
+              <li>
+                <h6>90% reduction in traffic deaths</h6>
+              </li>
+              <li>
+                <h6>60% drop in harmful emissions </h6>
+              </li>
+              <li>
+                <h6>Eliminate stop-and-go waves by 100%</h6>
+              </li>
+              <li>
+                <h6>10% improvement in fuel economy
+                </h6>
+              </li>
+              <li>
+                <h6>500% increase in lane capacity </h6>
+              </li>
+              <li>
+                <h6>40% reduction in travel time</h6>
+              </li>
+              <li>
+                <h6>Improve walkability and livability</h6>
+              </li>
+              <li>
+                <h6>Reduce urban CO2 emissions by 80% worldwide</h6>
+              </li>
+            </ul>
+            <a target="_blanck"
+              href="https://www.thalesgroup.com/en/markets/digital-identity-and-security/iot/magazine/7-benefits-autonomous-cars">Read
+              More</a>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1500" class="col-md-5">
+          <img width="100%" src="./images/1_An_1LhygAAaEztLnpKb_VQ.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safety">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-right" data-aos-duration="1500" class="col-md-6">
+          <div id="chartdiv" style="width: 100%; height: 400px; background-color: #1a1c1d;"></div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6">
+          <div class="text">
+            <p>According to the World health orgnization</p>
+            <h2>One of the most leading and also growing causes of death are Road Injuries</h2>
+            <p>Leading causes of death in low-income countries road injuries comes in 7th place.</p>
+            <button class="btn"><a target="_blanck"
+                href="https://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death">Read
+                More</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="performance">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-right" data-aos-duration="1500" class="col-md-6">
+          <div class="text">
+            <p>Report</p>
+            <h2>About <span style="color: #05c77e;">1.35</span> Million People Killed Every Year in Traffic Crashes, And
+              Counting.</h2>
+            <p>Every 24 seconds someone is killed in a road traffic crash. And the countdown is constantly getting
+              shorter.</p>
+            <a target="_blanck"
+              href="https://thecityfix.com/blog/report-1-35-million-people-killed-every-year-in-traffic-crashes-and-counting-claudia-adriazola-steil-subha-ranjan-banerjee-anna-bray-sharpin/">Read
+              More</a>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6">
+          <img width="80%" src="./images/crash.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="article">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-down" data-aos-duration="1500" class="col-md-10">
+          <h2><i class="fas fa-quote-left"></i></h2>
+          <h3>Our lives were forever changed because of these technological advances. Similarly, driverless cars would
+            bring about one of the biggest societal and technological revolutions since the industrial revolution.</h3>
+          <h2><i class="fas fa-quote-right"></i></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <h2>Benefits of Automation</h2>
+        </div>
+        <div class="col-md-10">
+          <div class="text">
+            <h6>SAFETY</h6>
+            <p>The safety benefits of automated vehicles are paramount. Automated vehicles’ potential to save lives and
+              reduce injuries is rooted in one critical and tragic fact: 94% of serious crashes are due to human error.
+              Automated vehicles have the potential to remove human error from the crash equation, which will help
+              protect drivers and passengers, as well as bicyclists and pedestrians. When you consider more than 35,000
+              people die in motor vehicle-related crashes in the United States each year, you begin to grasp the
+              lifesaving benefits of driver assistance technologies.</p>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="text">
+            <h6>ECONOMIC AND SOCIETAL BENEFITS</h6>
+            <p>Automated vehicles could deliver additional economic and additional societal benefits. A NHTSA study
+              showed motor vehicle crashes in 2010 cost $242 billion in economic activity, including $57.6 billion in
+              lost workplace productivity, and $594 billion due to loss of life and decreased quality of life due to
+              injuries. Eliminating the vast majority of motor vehicle crashes could erase these costs.</p>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="text">
+            <h6>EFFICIENCY AND CONVENIENCE
+            </h6>
+            <p>Roads filled with automated vehicles could also cooperate to smooth traffic flow and reduce traffic
+              congestion. Americans spent an estimated 6.9 billion hours in traffic delays in 2014, cutting into time at
+              work or with family, increasing fuel costs and vehicle emission. With automated vehicles, the time and
+              money spent commuting could be put to better use. A study stated that automated vehicles could free up as
+              much as 50 minutes each day that had previously been dedicated to driving.</p>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="text">
+            <h6>MOBILITY</h6>
+            <p>While its full societal benefits are difficult to project, the transformative potential of automated
+              vehicles and their driver assistance features can also be understood by reviewing U.S. demographics and
+              the communities these technologies could help to support.For example, automated vehicles may also provide
+              new mobility options to millions more Americans. Today there are 49 million Americans over age 65 and 53
+              million people have some form of disability.
+              In many places across the country employment or independent living rests on the ability to drive.
+              Automated vehicles could extend that kind of freedom to millions more. One study suggests that automated
+              vehicles could create new employment opportunities for approximately 2 million people with disabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="features">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-right" data-aos-duration="1500" class="col-md-12 col-lg-3">
+          <div class="text">
+            <p>AUTOPILOT</p>
+            <h2>Future of Driving</h2>
+            <p>Autopilot advanced safety and convenience features are designed to assist you with the most burdensome
+              parts of driving .</p>
+          </div>
+        </div>
+        <div data-aos="fade-down" data-aos-duration="1500" class="col-md-12 col-lg-6">
+          <img src="./images/carFromTopCopy.png" alt="">
+          <div id="star-five"><img src="./images/six-pointed-star-silhouette.png" alt=""></div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1500" class="col-md-12 col-lg-3 p-5">
+          <div class="text">
+            <div class="cameras border-bottom pt-4 pb-4 ">
+              <h2>360 </h2>
+              <p>Rare, side and forward-facing cameras privide maximum visibility</p>
+            </div>
+            <div class="radar border-bottom pt-4 pb-4">
+              <h2>160 m</h2>
+              <p>forward-facing radar provides a long-range view of distance object</p>
+            </div>
+            <div class="sensors pt-4 pb-4">
+              <h2>12 sensors</h2>
+              <p>Ultrasonic sensors detects nearby cars, prevents potential</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="range">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-up" data-aos-duration="1500" class="col-md-12 contain-text">
+          <div class="text">
+            <p>RANGE</p>
+            <h2>Go Anywhere</h2>
+            <p>This Model can get you any where you want <br>
+              go with industry-leading range and convenient <br>
+              charging options all over the world.</p>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500" class="col-md-12 img-position"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="range-features">
+    <div class="container">
+      <div data-aos="fade-up" data-aos-duration="1500" class="row">
+        <div class="col-md-4">
+          <div class="text">
+            <h2>402 mi</h2>
+            <p>Go anywhere with up to 402 miles of range on a single charge</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text">
+            <h2>15 min</h2>
+            <p>Recharge up to 163 miles in 15 minutes at any super charge location</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text">
+            <h2>17000+</h2>
+            <p>Superchargers placed along well-traveled routes around the world</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="model-features">
+    <div class="container">
+      <div class="row">
+        <h2 data-aos="fade-up" data-aos-duration="1500" class="text-center">Model Specs</h2>
+        <div data-aos="fade-right" data-aos-duration="1500" class="col-md-6">
+          <div class="text">
+            <h5>PERFORMANCE</h5>
+            <p><span>Battery</span><span>Long Range</span></p>
+            <p><span>Acceleration</span><span>3.7 seconds 0-60 mph</span></p>
+            <p><span>Range</span><span>102 miles (EPA est.)</span></p>
+            <p><span>Drive</span><span>All-Wheel Drive</span></p>
+            <p><span>Seating</span><span>5 Aduits</span></p>
+            <p><span>Wheels</span><span>19 or 21</span></p>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6">
+          <div class="text">
+            <h5>LONG RANGE PLUS</h5>
+            <p><span>Weight</span><span>4,883 lbs</span></p>
+            <p><span>Cargo</span><span>28 cu ft</span></p>
+            <p><span>Displays</span><span>Driver Display + 17" Touchscreen</span></p>
+            <p><span>Supercharging Max / <br> Payment Type</span><span>250 KW Max; <br> Pay Per Use</span></p>
+            <p><span>Onboard Charger Max</span><span>11 KW Max (48A)</span></p>
+            <p><span>Warranty: Basic Vehicle</span><span>4 years or 50 milles,<br>whichever comes first</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="safety">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-right" data-aos-duration="1500" class="col-md-6">
+          <img style="transform: none" width="90%" src="./images/whats-the-interior-like-432.jpg" alt="">
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6">
+          <div class="text">
+            <p>SAFETY</p>
+            <h2>Hight Impact Protection</h2>
+            <p>Model S is built from the ground up as an electric vehicle, with high-strength architecture and a
+              floor-mounted battery pack allowing for incredible impact protection</p>
+            <button class="btn">Order now</button>
+            <button class="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCgeIuV_9-r9Z06QRNZK4gdXNx7k63upS0",
+      authDomain: "self-driving-car-401a8.firebaseapp.com",
+      projectId: "self-driving-car-401a8",
+      storageBucket: "self-driving-car-401a8.appspot.com",
+      messagingSenderId: "393443993080",
+      appId: "1:393443993080:web:1196490a49b8fb2232620d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //firebase variables
+    const auth = firebase.auth();
+  </script>
+
+  <!-- script file -->
+  <script src="./script/script.js"></script>
+  <script src="./script/home.js"></script>
+  <script src="./script/auth.js"></script>
+  <script src="./script/charts.js"></script>
+
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

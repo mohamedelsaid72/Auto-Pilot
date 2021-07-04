@@ -1,0 +1,99 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #1a1c1d;
+    padding: 50px 0;
+}
+.container .row .col-xl-3,
+.container .row .col-xl-9 {
+    padding: 10px;
+}
+.container .row .col-xl-9 .card .card-body a.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #05c77e;
+    margin-right: 12px;
+}
+.container .row .col-xl-9 .card .card-body a.btn-secondary:hover{
+    background-color: #05c77e;
+}
+.container .row .col-xl-9 .card .card-body button.btn-success{
+    background-color: #05c77e;
+    border: 2px solid #05c77e;
+}
+.container .row .col-xl-9 .card .card-body button.btn-success:hover {
+    background-color: transparent;
+    color: #05c77e;
+}
+.container .row .col-xl-9 .card {
+    padding: 20px 10px;
+    margin-bottom: 0;
+}
+.container .row .col-xl-9 .card .text-center {
+    margin: 0 0 20px; 
+}
+.container .row .card .card-body .account-settings{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
+
+.account-settings .user-profile .user-avatar img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+
+.account-settings .user-profile h6.user-email {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.account-settings .about {
+    margin: 1rem 0 0 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.card {
+    background: #1e2123;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid #596280;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #1a1c1d;
+    color: #bcd0f7;
+}
+
+.text-primary {
+    color: #05c77e !important
+}
